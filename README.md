@@ -7,4 +7,7 @@ Poem-o-matic is a friendly "bot-in-a-box" that prints out a keepsake poem just f
 
 
 Things to ADD / Make better 
-1. Auto 
+
+1. Use textwrap.fill for Json data
+2. Use escape for ' issues,  ' crashes when pritnig 
+
