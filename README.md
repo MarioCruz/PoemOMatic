@@ -205,4 +205,7 @@ Plug an ethernet cable into the Raspberry Pi, power the Pi and if ethernet setti
 SFTP using the IP and User PI & Password:raspberry
 
 Add new poems into the PoemOMatic/PoemJson/ with a .json extension.
+   You may want to valdidate your JSON files using a vilidator before uploading 
+   i.e. https://jsonformatter.curiousconcept.com
+   
 
