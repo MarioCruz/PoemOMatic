@@ -201,3 +201,8 @@ The poems themselves are in the `PoemJson` directory in a JSON structure. Make a
 Plug an ethernet cable into the Raspberry Pi, power the Pi and if ethernet settings are correct the IP address will be shown at the top of the ready print slip:
 
 ![12948437_10153972496991827_1152713091_o](https://cloud.githubusercontent.com/assets/33945/14190472/f7fe626c-f760-11e5-941a-30776f6bb99f.jpg)
+
+SFTP using the IP and User PI & Password:raspberry
+
+Add new poems into the PoemOMatic/PoemJson/ with a .json extension.
+
