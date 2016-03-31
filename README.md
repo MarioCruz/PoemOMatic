@@ -175,7 +175,7 @@ Press the button and receive a poem:
 ![12941008_10153972497251827_319633202_o](https://cloud.githubusercontent.com/assets/33945/14190534/5617ce9c-f761-11e5-86f2-b6d1f083d8b9.jpg)
 
 
-If you would like to use the box I used, I modified an [Adafruit IOT Printer box](https://www.adafruit.com/products/717).
+I modified the box to be screwless and added the O' Miami logo using [Adafruit IOT Printer box /via Thingiverse box](http://www.thingiverse.com/thing:18319/#files) as a source and produced on [Moonlighter Wood CNC](http://moonlighter.co) .
 
 ![10989503_10153924767551827_6255215138792160131_o](https://cloud.githubusercontent.com/assets/33945/14190165/532c437c-f75f-11e5-9ce5-00918ff05490.jpg)
 
@@ -196,9 +196,11 @@ If you would like to use the box I used, I modified an [Adafruit IOT Printer box
           "And would suffice."]}
 ```
 
-The poems themselves are in the `PoemJson` directory in a JSON structure. Make any changes to the poems and use a SFTP program i.e. Transit, Cyberduck, etc.
+The poems themselves are in the `PoemJson` directory in a JSON structure. Make any changes or add poems and use a SFTP program i.e. Transit, Cyberduck, etc to upload into the Raspberry Pi.
 
 Plug an ethernet cable into the Raspberry Pi, power the Pi and if ethernet settings are correct the IP address will be shown at the top of the ready print slip:
+
+If you get no IP reboot and try again.
 
 ![12948437_10153972496991827_1152713091_o](https://cloud.githubusercontent.com/assets/33945/14190472/f7fe626c-f760-11e5-941a-30776f6bb99f.jpg)
 
