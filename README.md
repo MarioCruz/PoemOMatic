@@ -175,7 +175,7 @@ Press the button and receive a poem:
 ![12941008_10153972497251827_319633202_o](https://cloud.githubusercontent.com/assets/33945/14190534/5617ce9c-f761-11e5-86f2-b6d1f083d8b9.jpg)
 
 
-I modified the box to be screwless and added the O' Miami logo using [Adafruit IOT Printer box /via Thingiverse box](http://www.thingiverse.com/thing:18319/#files) as a source and produced on [Moonlighter Wood CNC](http://moonlighter.co) .
+I modified the box to be screwless and added the O' Miami logo using [Adafruit IOT Printer box /via Thingiverse](http://www.thingiverse.com/thing:18319/#files) as my starting source source and cut it on [Moonlighters Wood CNC](http://moonlighter.co) .
 
 ![10989503_10153924767551827_6255215138792160131_o](https://cloud.githubusercontent.com/assets/33945/14190165/532c437c-f75f-11e5-9ce5-00918ff05490.jpg)
 
@@ -204,9 +204,9 @@ If you get no IP reboot and try again.
 
 ![12948437_10153972496991827_1152713091_o](https://cloud.githubusercontent.com/assets/33945/14190472/f7fe626c-f760-11e5-941a-30776f6bb99f.jpg)
 
-SFTP using the IP and User PI & Password:raspberry
+SFTP in to the PI using the IP  User: PI Password:raspberry
 
-Add new poems into the PoemOMatic/PoemJson/ with a .json extension.
+Add new poems into the /PoemOMatic/PoemJson/ with a .json extension.
    You may want to valdidate your JSON files using a vilidator before uploading 
    i.e. https://jsonformatter.curiousconcept.com
    
