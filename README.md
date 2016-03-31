@@ -30,36 +30,22 @@ Additional inspiration, research and some code lifted and referenced from these 
 #### Materials
 
 - [Raspberry Pi 2 or 3](https://www.adafruit.com/category/105)
-- Breadboard http://www.amazon.com/microtivity-IB400-400-point-Experiment-Breadboard/dp/B0084A7PI8
-- Thermal Printer kit  https://www.adafruit.com/product/600
-- 6 Breadboard Wires https://www.adafruit.com/product/153
-- A 10k resistor http://www.amazon.com/E-Projects-10k-Resistors-Watt-Pieces/dp/B00BWYS9BA
+- [Breadboard](http://www.amazon.com/microtivity-IB400-400-point-Experiment-Breadboard/dp/B0084A7PI8)
+- [Thermal Printer kit](https://www.adafruit.com/product/600)
+- [6 Breadboard Wires](https://www.adafruit.com/product/153) 
+- [A 10k resistor](http://www.amazon.com/E-Projects-10k-Resistors-Watt-Pieces/dp/B00BWYS9BA)
 
-#### Install
-Detailed instructions on how to install, configure, and get the project running. This should be frequently tested to ensure reliability.
-
-Very clear instructions with 
-
-`line by line commands`
-
-`to copy and paste`
-
-See [the CfAPI](https://github.com/codeforamerica/cfapi#installation) for an example.
-
-This assumes you can get a Pi up and running if not go here : (Help urlLink)
-
-SSH into your PI or, via monitor and keyboard, open a terminal.
+Note: This document assumes you can get a Raspberry Pi up and running. If not, [try this link](https://www.raspberrypi.org/help/quick-start-guide/).
 
 #### Setup the Raspberry Pi
-We will need to Install the required files by typing the following into a terminal window on your PI:
+SSH into your Raspbery Pi or - via monitor and keyboard - open a terminal. We will need to install the required files by typing the following into a terminal window on your Pi:
 
-Upgrade the PI OS Files:
 ```
 sudo apt-get update
 sudo apt-get upgrade
 ```
 
-Install needed packages :
+Install the needed packages:
 ```
 sudo apt-get install python-dev
 sudo apt-get install python-rpi.gpio
@@ -70,10 +56,10 @@ sudo apt-get install gcc
 
 Next give the serial port permission to be used:
 ```
-$ sudo usermod -a -G dialout pi
+sudo usermod -a -G dialout pi
 ```
 
-Let's reboot and make sure everything is ok:
+Now reboot, to make sure everything is okay:
 ```
 sudo shutdown -r now
 ```
@@ -99,6 +85,8 @@ sudo shutdown -r now
 
 #### Project Wiring 
 
+![poem-o-matic_-_google_docs](https://cloud.githubusercontent.com/assets/33945/14189971/37ef71ca-f75e-11e5-8f26-1458b4edf840.jpg)
+
 ##### Install the printer
 
 Take the green/yellow/black cable and cut the green cable. You don’t need it and it can it can short out your Pi.
@@ -107,7 +95,7 @@ Now simply connect it to the TTL socket in the back of the printer; the black ca
 
 To connect the printer we make use of the pin #6 (Ground) and the pin #8 (GPIO14). 
 
-Now, let's connect the power. Attach the printer’s red/black wires to the 2.1mm jack adapter 
+Now, let's connect the power. Attach the printer’s red/black wires to the 2.1mm jack adapter.
 
 
 ##### Power up the printer
