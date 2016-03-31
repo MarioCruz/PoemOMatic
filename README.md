@@ -91,11 +91,18 @@ sudo shutdown -r now
 
 Take the green/yellow/black cable and cut the green cable. You don’t need it and it can it can short out your Pi.
 
-Now simply connect it to the TTL socket in the back of the printer; the black cable goes into the GND, and the yellow into the RX - the green wire should just be a stub.
+Now connect it to the TTL socket in the back of the printer: the black cable goes into the GND, and the yellow into the RX, and the green wire should just be a stub.
 
 To connect the printer we make use of the pin #6 (Ground) and the pin #8 (GPIO14). 
 
-Now, let's connect the power. Attach the printer’s red/black wires to the 2.1mm jack adapter.
+![12910189_10153972478171827_1459247504_n](https://cloud.githubusercontent.com/assets/33945/14190358/50039ae6-f760-11e5-9735-6d77677f73dc.jpg)
+
+
+![12939506_10153972446901827_483233786_n](https://cloud.githubusercontent.com/assets/33945/14190201/789ee1f0-f75f-11e5-8548-70cf512f329e.png)
+
+Now, let's connect the power. Attach the printer’s red/black wires to the 2.1mm jack adapter:
+
+![](https://learn.adafruit.com/system/assets/assets/000/001/944/original/components_poweradapt.jpg?1396777663)
 
 
 ##### Power up the printer
@@ -138,6 +145,7 @@ You should get a random poem.
 
 Connect one side of the push button to pin 14 GND on the Raspberry Pi. Connect the the other side of the button to pin 16 on the Pi (GPIO 23). You also need to connect the same side of the switch that’s connected to GPIO 23 via a 10k ohm resistor to pin 1 of the Raspberry Pi (which supplies 3.3 volts of electricity).
 
+![12419284_10153924767736827_3342091426751050788_o](https://cloud.githubusercontent.com/assets/33945/14190119/1cd6f75e-f75f-11e5-83d2-7eded4b730ed.jpg)
 
 Finally, we want the PoemOMatic program to run whenever the Pi is started and the button is pushed. Therefore we need to modify the `/etc/rc.local` file to reflect this by using a terminal window:
 
@@ -160,32 +168,36 @@ exit 0
 
 Once you have tested that it all works, transfer your Pi, printer, and breadboard into the custom box and make sure everything is plugged in and sits well. Power it all up, give a few minutes, if it all works the printer should say it is ready with an IP if connected.  
 
+![12948437_10153972496991827_1152713091_o](https://cloud.githubusercontent.com/assets/33945/14190472/f7fe626c-f760-11e5-941a-30776f6bb99f.jpg)
 
 Press the button and receive a poem:
 
+![12941008_10153972497251827_319633202_o](https://cloud.githubusercontent.com/assets/33945/14190534/5617ce9c-f761-11e5-86f2-b6d1f083d8b9.jpg)
 
-If you would like to use the box I used, I modified an Adafruit IOT Printer box. [ADD LINK]
+
+If you would like to use the box I used, I modified an [Adafruit IOT Printer box](https://www.adafruit.com/products/717).
+
+![10989503_10153924767551827_6255215138792160131_o](https://cloud.githubusercontent.com/assets/33945/14190165/532c437c-f75f-11e5-9ce5-00918ff05490.jpg)
+
 
 #### Updating poems 
 
-Using any SFTP program i.e. Transit, Cyberduck, etc
+```
+{"title": "Fire and Ice",
+ "author": "Robert Frost",
+ "text": ["Some say the world will end in       fire,",
+          "Some say in ice.",
+          "From what I've tasted of desire,",
+          "I hold with those who favor fire.",
+          "But if I had to perish twice,",
+          "I think I know enough of hate",
+          "To say that for destruction ice",
+          "Is also great",
+          "And would suffice."]}
+```
+
+The poems themselves are in the `PoemJson` directory in a JSON structure. Make any changes to the poems and use a SFTP program i.e. Transit, Cyberduck, etc.
 
 Plug an ethernet cable into the Raspberry Pi, power the Pi and if ethernet settings are correct the IP address will be shown at the top of the ready print slip:
 
-## Contribute
-A short explanation of how others can contribute. Be sure to show how to submit issues and pull requests. Include a [CONTRIBUTING.md file](https://github.com/18F/hub/blob/master/CONTRIBUTING.md). Here is a good [CfA example](https://github.com/codeforamerica/ohana-web-search/blob/master/CONTRIBUTING.md). GitHub also has some new guides on [how to contribute](https://guides.github.com/activities/contributing-to-open-source/#contributing).
-
-## License
-A link to the Code for America copyright and [LICENSE.md file](https://github.com/codeforamerica/ceviche-cms/blob/master/LICENCE.md).
-
-
-
-
-
-
-
-
-
-
-
-
+![12948437_10153972496991827_1152713091_o](https://cloud.githubusercontent.com/assets/33945/14190472/f7fe626c-f760-11e5-941a-30776f6bb99f.jpg)
