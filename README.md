@@ -210,4 +210,8 @@ Add new poems into the /PoemOMatic/PoemJson/ with a .json extension.
    You may want to valdidate your JSON files using a vilidator before uploading 
    i.e. https://jsonformatter.curiousconcept.com
    
+ ##### Things to make better
+   1. Use textwrap.fill  Json data
+   2. Use escape for ' issues in JSON data.  "'" crashes when pritnig 
+  
 
