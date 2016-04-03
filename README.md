@@ -51,6 +51,7 @@ sudo apt-get install python-dev
 sudo apt-get install python-rpi.gpio
 sudo apt-get install python-serial 
 sudo apt-get install python-imaging-tk
+sudo apt-get install python-unidecode
 sudo apt-get install gcc 
 ```
 
