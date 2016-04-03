@@ -141,7 +141,8 @@ Python PoemMain.py
 
 You should get a random poem.
 
-If you are using a Raspberry Pi 3 
+On the PI3 the Serial Port is named "ttyS0" and not "ttyAMA0" 
+If you are using a Raspberry Pi 3
 
 Comment 
    p = printer.ThermalPrinter(serialport="/dev/ttyAMA0")
