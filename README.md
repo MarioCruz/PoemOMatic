@@ -144,7 +144,7 @@ You should get a random poem.
 If you are using a Raspberry Pi 3 
 
 Comment 
-#  p = printer.ThermalPrinter(serialport="/dev/ttyAMA0")
+   p = printer.ThermalPrinter(serialport="/dev/ttyAMA0")
 
 and uncomment 
    p = printer.ThermalPrinter(serialport="/dev/ttyS0")
