@@ -52,7 +52,12 @@ def printer_print(p, poem):
 
 # Run the program
 if __name__ == "__main__":
-    p = printer.ThermalPrinter(serialport="/dev/ttyAMA0")
+ 
+  # Pi 1 and 2 
+   p = printer.ThermalPrinter(serialport="/dev/ttyAMA0")
+ 
+  # Pi 3
+  #  p = printer.ThermalPrinter(serialport="/dev/ttyS0")
 
 # Print the Logo
     i = Image.open("o.png")
@@ -76,5 +81,6 @@ p.font_b(False)
 p.linefeed()
 p.linefeed()
 p.linefeed()
+
 
 
