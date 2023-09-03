@@ -1,0 +1,84 @@
+# (c) 2023  Mario Cruz
+# please credit me if you modify and/or use this code
+# not for commercial use
+import os
+import glob
+import json
+import random
+import printer, textwrap
+from PIL import Image
+from io import BytesIO
+
+
+def load_random_poem(poem_directory):
+    """Load a random poem from the specified directory."""
+    path = os.path.join(poem_directory, "*.json")
+    poem_files = glob.glob(path)
+    if not poem_files:
+        print("No poem files found.")
+        return None
+
+    random_file = random.choice(poem_files)
+    try:
+        with open(random_file, 'r') as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        print(f"Failed to decode JSON from {random_file}")
+        return None
+
+
+def console_print(poem):
+    """Print poem details to the console."""
+    print(poem['title'])
+    print("by " + poem['author'])
+    print("\n".join(poem['text']))
+
+
+def printer_print(p, poem):
+    """Print poem details using a thermal printer."""
+    p.bold()
+    p.inverse()
+    p.print_text(poem['title'])
+    p.linefeed()
+    p.bold(False)
+    p.inverse(False)
+    p.justify("L")
+    p.print_text("\n".join(poem['text']))
+
+    p.linefeed()
+    p.justify("R")
+    p.linefeed()
+    p.bold()
+    p.print_text(poem['author'])
+    p.justify("L")
+    p.bold(False)
+
+
+if __name__ == "__main__":
+    PRINTER_PORT = "/dev/ttyS0"
+    LOGO_PATH = "o.png"
+    POEM_DIRECTORY = os.path.join(os.getcwd(), "PoemJson")
+
+    p = printer.ThermalPrinter(serialport=PRINTER_PORT)
+
+    # Print the Logo
+    with Image.open(LOGO_PATH) as i:
+        data = list(i.getdata())
+        p.print_bitmap(data, *i.size, False)
+        p.linefeed()
+
+    # Print the Random Poem
+    poem = load_random_poem(POEM_DIRECTORY)
+    if poem:
+        console_print(poem)
+        printer_print(p, poem)
+        p.linefeed()
+
+    # Print The Footer
+    p.font_b()
+    p.print_text("Poem-o-matic 2016 by @mariocruz")          
+    p.print_text("@OMiamiFestival @MarioTheMaker")
+    p.print_text("#OPoemOMatic #MarioTheMaker")
+    p.print_text(" ")
+    p.font_b(False)
+    p.linefeed(3)
