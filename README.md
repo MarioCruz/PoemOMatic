@@ -188,7 +188,8 @@ Reboot your Raspberry Pi to see the changes in effect:
 sudo reboot
 
 
-After the reboot, the Bash script will be executed, which will then run your Python script. If any issues arise, they will be captured in the `/home/pi/cronjoblog` file for debugging.
+After the reboot, the Bash script will be executed, which will then run your Python script. If any issues arise,
+they will be captured in the `/home/pi/cronjoblog` file for debugging.
 
 ```
 
