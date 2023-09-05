@@ -127,9 +127,9 @@ Connect one side of the push button to pin 14 GND on the Raspberry Pi. Connect t
 
 ![12419284_10153924767736827_3342091426751050788_o](https://cloud.githubusercontent.com/assets/33945/14190119/1cd6f75e-f75f-11e5-83d2-7eded4b730ed.jpg)
 
-Finally, we want the PoemOMatic program to run whenever the Pi is started and the button is pushed. Therefore we need to modify the `/etc/rc.local` file to reflect this by using a terminal window:
+Finally, we want the PoemOMatic program to run whenever the Pi is started and the button is pushed. 
 
-```
+
 ## Running PoemOMatic using a Bash script
 
 To ensure the `PoemMain2023.py` script runs smoothly on boot using a Bash wrapper, follow these steps:
@@ -186,7 +186,7 @@ Reboot your Raspberry Pi to see the changes in effect:
 
 ```bash
 sudo reboot
-```
+
 
 After the reboot, the Bash script will be executed, which will then run your Python script. If any issues arise, they will be captured in the `/home/pi/cronjoblog` file for debugging.
 
