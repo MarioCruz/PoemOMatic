@@ -47,17 +47,23 @@ sudo apt-get upgrade
 
 Install the needed packages:
 ```
-sudo apt-get install python-dev
-sudo apt-get install python-rpi.gpio
-sudo apt-get install python-serial 
-sudo apt-get install python-imaging-tk
-sudo apt-get install python-unidecode
-sudo apt-get install gcc 
+sudo apt install python3-pip
+sudo apt-get install netatalk
+python3 pip install thermalprinter
+python3 pip install pillow
 ```
 
-Next give the serial port permission to be used:
+Next give the serial port permission to be used Disable Bluetooth:
+Changes to your `cmdline.txt` could render your Pi useless make a Backup image of your SD.
 ```
-sudo usermod -a -G dialout pi
+sudo nano /boot/config.txt
+# Disable Bluetooth
+dtoverlay=disable-bt
+
+sudo systemctl disable hciuart.service
+sudo systemctl disable bluealsa.service
+sudo systemctl disable bluetooth.service
+
 ```
 
 Now reboot, to make sure everything is okay:
@@ -65,24 +71,6 @@ Now reboot, to make sure everything is okay:
 sudo shutdown -r now
 ```
 
-If everything boots correctly please make an image backup of your SD / Raspberry PI with [Apple Pi-Baker Mac](http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/) or an app of your choice like [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/) (Note: I have not used this.)
-
-Changes to your `cmdline.txt` could render your Pi useless until you re-image your SD.
-
-Then we need to change the Pi serial port. These changes keep the printer from spewing garbage when you first set it up. The serial port is set up for terminal use, so we need to turn that off.
-
-```
-sudo nano /boot/cmdline.txt
-```
-
-In the file, change:
- `console=ttyAMA0,115200` to
- `console=tty1` 
-
-Reboot to make sure it’s all working:
-```
-sudo shutdown -r now
-``` 
 
 #### Project Wiring 
 
@@ -106,18 +94,7 @@ Now, let's connect the power. Attach the printer’s red/black wires to the 2.1m
 ![](https://learn.adafruit.com/system/assets/assets/000/001/944/original/components_poweradapt.jpg?1396777663)
 
 
-##### Power up the printer
-
-Plug the 5V 2A power supply into the 2.1 mm DC jack adapter provided with the kit. 
-
-Reboot:
-```
-sudo shutdown -r now
-```
-
-If your printer starts spewing gibberish when it reboots, check `/boot/cmdline.txt` files to make sure the changes were saved from above.
-
-Next we need to download the python files needed to print and Poem-O-Matic files to run from github. 
+##### Power up the
 
 First you will need to install `git-core` onto your pi using:
 
@@ -141,14 +118,7 @@ Python PoemMain.py
 
 You should get a random poem.
 
-On the PI3 the Serial Port is named "ttyS0" and not "ttyAMA0" 
-If you are using a Raspberry Pi 3
 
-Comment 
-   p = printer.ThermalPrinter(serialport="/dev/ttyAMA0")
-
-and uncomment 
-   p = printer.ThermalPrinter(serialport="/dev/ttyS0")
 
 
 #### Connect the switch 
@@ -160,18 +130,66 @@ Connect one side of the push button to pin 14 GND on the Raspberry Pi. Connect t
 Finally, we want the PoemOMatic program to run whenever the Pi is started and the button is pushed. Therefore we need to modify the `/etc/rc.local` file to reflect this by using a terminal window:
 
 ```
-sudo nano /etc/rc.local
+## Running PoemOMatic using a Bash script
 
-# Change to the Poem Directory
-cd /home/pi/PoemOMatic
+To ensure the `PoemMain2023.py` script runs smoothly on boot using a Bash wrapper, follow these steps:
 
-# Tell me the system is up and the IP (if connected)
-python upip.py
+### 1. Create a new Bash script
 
-# Listening for the Switch to be pressed
-python GPIORUN.py
+Open a terminal and create the script using `nano`:
 
-exit 0
+```bash
+nano /home/pi/PoemOMatic/run_poemomatic.sh
+```
+
+### 2. Add the content to the script
+
+Insert the following lines into the script:
+
+```bash
+#!/bin/bash
+
+# Navigate to the directory (optional, but can help with relative paths in the script)
+cd /home/pi/PoemOMatic/
+
+# Run the Python script
+/usr/bin/python3 /home/pi/PoemOMatic/PoemMain2023.py >> /home/pi/cronjoblog 2>&1
+```
+
+After entering the content, save and exit the editor. In `nano`, this is done by pressing `CTRL + X`, then `Y`, and finally `Enter`.
+
+### 3. Make the Bash script executable
+
+Provide the necessary permissions to the script so that it can be executed:
+
+```bash
+chmod +x /home/pi/PoemOMatic/run_poemomatic.sh
+```
+
+### 4. Update the `cron` job to run the Bash script
+
+To make the Bash script run on boot, update your `crontab`:
+
+```bash
+sudo crontab -e
+```
+
+Replace the existing line (if you've set it up before) or add a new line with:
+
+```bash
+@reboot /home/pi/PoemOMatic/run_poemomatic.sh
+```
+
+### 5. Reboot
+
+Reboot your Raspberry Pi to see the changes in effect:
+
+```bash
+sudo reboot
+```
+
+After the reboot, the Bash script will be executed, which will then run your Python script. If any issues arise, they will be captured in the `/home/pi/cronjoblog` file for debugging.
+
 ```
 
 ##### Save and Reboot
