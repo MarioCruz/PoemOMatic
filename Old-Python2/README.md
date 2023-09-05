@@ -1,4 +1,4 @@
-# O, Miami Poem-O-Matic 2023
+# O, Miami Poem-O-Matic
 
 ## What
 Poem-o-matic is a friendly "bot-in-a-box" that prints out a keepsake poem just for you when you press the button. We hope you'll snap an Instagram of your poem and share it with your social network.
@@ -29,7 +29,7 @@ Additional inspiration, research and some code lifted and referenced from these 
 ## How
 #### Materials
 
-- [Raspberry Pi3](https://www.adafruit.com/category/105)
+- [Raspberry Pi 2 or 3](https://www.adafruit.com/category/105)
 - [Breadboard](http://www.amazon.com/microtivity-IB400-400-point-Experiment-Breadboard/dp/B0084A7PI8)
 - [Thermal Printer kit](https://www.adafruit.com/product/600)
 - [6 Breadboard Wires](https://www.adafruit.com/product/153) 
