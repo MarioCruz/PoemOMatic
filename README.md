@@ -105,20 +105,19 @@ git clone git://github.com/MarioCruz/PoemOMatic
 
 Now we are ready for a test print: 
 ```
-python test.py
+python3 test2023.py
 
 TestIMAGE
 ```
+![IMG_5497 Large](https://github.com/MarioCruz/PoemOMatic/assets/1426877/5cb72d56-8d95-451b-9574-a4d72821a674)
 
 This a poem to verify this works:
 
 ```
-Python PoemMain.py
+Python3 PoemMain2023.py
 ```
 
 You should get a random poem.
-
-
 
 
 #### Connect the switch 
