@@ -21,7 +21,7 @@ Poem-o-matic was created for the 2016 [O, Miami Poetry Festival](http://www.omia
 
 Poem-o-matic is a project by Mario Cruz, with negligible spiritual support from Cristina Solana and Rebekah Monson. Ernie Hsiung assisted with the documentation.
 
-Additional inspiration, research and some code lifted and referenced from these two sites:
+Orignial inspiration in 2016, research and referenced from these two sites:
 
 - [Carrie Anne Philbin](http://geekgurldiaries.blogspot.co.uk/2012/12/part-2.html) @Geekgurldiaries 
 - [Giles Booth](http://www.suppertime.co.uk/blogmywiki/2012/12/pi-poems/) @blogmywiki
