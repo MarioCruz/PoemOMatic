@@ -225,11 +225,12 @@ I modified the box to be screwless and added the O' Miami logo using [Adafruit I
           "And would suffice."]}
 ```
 
-The poems themselves are in the `PoemJson` directory in a JSON structure. Make any changes or add poems and use a SFTP program i.e. Transit, Cyberduck, etc to upload into the Raspberry Pi.
+The poems themselves are in the `PoemJson` directory in a JSON structure. 
 
-Plug an ethernet cable into the Raspberry Pi, power the Pi and if ethernet settings are correct the IP address will be shown at the top of the ready print slip:
+Plug an ethernet cable into the Raspberry Pi, power the Pi
 
-On a Mac browse the network an connect to Pomeomatic to the PI the login is (in our case) User: PI Password:raspberry
+On a Mac browse the network an connect to Pomeomatic to the PI the login is (in our case) User: PI Password:raspberry or
+Make any changes or add poems and use a SFTP program i.e. Transit, Cyberduck, etc to upload into the Raspberry Pi.
 
 Add new poems into the /PoemOMatic/PoemJson/ with a .json extension.
    You may want to valdidate your JSON files using a vilidator before uploading 
