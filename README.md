@@ -229,18 +229,16 @@ The poems themselves are in the `PoemJson` directory in a JSON structure. Make a
 
 Plug an ethernet cable into the Raspberry Pi, power the Pi and if ethernet settings are correct the IP address will be shown at the top of the ready print slip:
 
-If you get no IP reboot and try again.
-
-![12948437_10153972496991827_1152713091_o](https://cloud.githubusercontent.com/assets/33945/14190472/f7fe626c-f760-11e5-941a-30776f6bb99f.jpg)
-
-SFTP in to the PI using the IP  User: PI Password:raspberry
+On a Mac browse the network an connect to Pomeomatic to the PI the login is (in our case) User: PI Password:raspberry
 
 Add new poems into the /PoemOMatic/PoemJson/ with a .json extension.
    You may want to valdidate your JSON files using a vilidator before uploading 
    i.e. https://jsonformatter.curiousconcept.com
    
  ##### Things to make better
-   1. Use textwrap.fill  Json data
-   2. Use escape for ' issues in JSON data.  "'" crashes when pritnig 
+  TBD, fixed all the old things in this area. 
+
+
+  MarioTheMaker 2023
   
 
