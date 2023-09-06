@@ -195,9 +195,9 @@ they will be captured in the `/home/pi/cronjoblog` file for debugging.
 
 ##### Save and Reboot
 
-Once you have tested that it all works, transfer your Pi, printer, and breadboard into the custom box and make sure everything is plugged in and sits well. Power it all up, give a few minutes, if it all works the printer should say it is ready with an IP if connected.  
+Once you have tested that it all works, transfer your Pi, printer, and breadboard into the custom box and make sure everything is plugged in and sits well. Power it all up, give a few minutes, if it all works the printer should say it is ready with.  
+![IMG_5490](https://github.com/MarioCruz/PoemOMatic/assets/1426877/efdcf7aa-4bc9-4952-bfac-2fab3350bcb9)
 
-![12948437_10153972496991827_1152713091_o](https://cloud.githubusercontent.com/assets/33945/14190472/f7fe626c-f760-11e5-941a-30776f6bb99f.jpg)
 
 Press the button and receive a poem:
 
