@@ -8,8 +8,7 @@ The very first (and at this time, only) Poem-o-matic was created for the 2016 [O
 
 #### Screenshots and Press
 
-![Composite photo of the Poem-O-Matic, with poems](https://pbs.twimg.com/media/CeCSeLtVAAAc_ZA.jpg)
-
+![IMG_5500](https://github.com/MarioCruz/PoemOMatic/assets/1426877/2c9dc18f-8c3c-46c6-be8f-1155a3099bff)
 
 
 ## Why
