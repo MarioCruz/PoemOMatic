@@ -10,8 +10,7 @@ The very first (and at this time, only) Poem-o-matic was created for the 2016 [O
 
 ![Composite photo of the Poem-O-Matic, with poems](https://pbs.twimg.com/media/CeCSeLtVAAAc_ZA.jpg)
 
-- Video at work: https://www.facebook.com/cryptocoder/videos/10153924795386827/
-- https://twitter.com/mariocruz/status/715596679215464451
+
 
 ## Why
 
