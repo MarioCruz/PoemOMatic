@@ -6,10 +6,14 @@ Poem-o-matic is a friendly "bot-in-a-box" that prints out a keepsake poem just f
 #### Status
 The very first (and at this time, only) Poem-o-matic was created for the 2016 [O, Miami Poetry Festival](http://www.omiami.org/) at the [Moonlighter Makerspace](http://moonlighter.co/), where fine Miami nerds come together to make cool things.
 
-#### Screenshots and Press
+#### Screenshots
 
 ![IMG_5500](https://github.com/MarioCruz/PoemOMatic/assets/1426877/2c9dc18f-8c3c-46c6-be8f-1155a3099bff)
 
+
+#### Video 
+
+https://github.com/MarioCruz/PoemOMatic/assets/1426877/8c90c99c-f934-47f5-93e1-09020cca742a
 
 ## Why
 
