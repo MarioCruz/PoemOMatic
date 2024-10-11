@@ -248,6 +248,6 @@ Add new poems into the /PoemOMatic/PoemJson/ with a .json extension.
   TBD, fixed all the old things in this area. 
 
 
-  MarioTheMaker 2023
+  MarioTheMaker 2015-2024
   
 
