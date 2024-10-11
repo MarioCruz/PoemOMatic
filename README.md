@@ -236,6 +236,10 @@ Make any changes or add poems and use a SFTP program i.e. Transit, Cyberduck, et
 Add new poems into the /PoemOMatic/PoemJson/ with a .json extension.
    You may want to valdidate your JSON files using a vilidator before uploading 
    i.e. https://jsonformatter.curiousconcept.com
+
+
+
+2024 upgrade the Pi2 to Pi Zero W 2, Save space and We can add a Bigger SD card fro more poems.
    
  ##### Things to make better
   TBD, fixed all the old things in this area. 
