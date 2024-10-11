@@ -1,6 +1,7 @@
 # (c) 2024 Mario Cruz Python3
 # Please credit me if you modify and/or use this code
 # Not for commercial use
+#This code does not need a 10k resistor while the 2023 code does
 
 import os
 import glob
