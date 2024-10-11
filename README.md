@@ -240,6 +240,9 @@ Add new poems into the /PoemOMatic/PoemJson/ with a .json extension.
 
 
 2024 upgrade the Pi2 to Pi Zero W 2, Save space and We can add a Bigger SD card fro more poems.
+![IMG_8478](https://github.com/user-attachments/assets/35d302eb-a6e1-4417-83a8-2cbd2f761970)
+
+
    
  ##### Things to make better
   TBD, fixed all the old things in this area. 
